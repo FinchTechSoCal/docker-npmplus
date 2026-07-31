@@ -7,7 +7,7 @@ services:
   npmplus:
     container_name: npmplus
     restart: unless-stopped
-    image: ghcr.io/zoeyvid/npmplus:latest # or docker.io/zoeyvid/npmplus:latest
+    image: ghcr.io/zoeyvid/npmplus:${IMAGE_TAG:-latest} # or docker.io/zoeyvid/npmplus:${IMAGE_TAG:-latest}
     pull_policy: always
 #    network_mode: host
     cap_drop:
