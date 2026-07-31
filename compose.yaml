@@ -111,9 +111,9 @@ services:
 #      - "NGINX_LOAD_LDAP_MODULE=true" # loads the ldap module, requires manual configuration, default false
 #      - "NGINX_LOAD_NTLM_MODULE=true" # loads the ntlm module, requires manual configuration, default false
 #      - "NGINX_LOAD_VHOST_TRAFFIC_STATUS_MODULE=true" # loads the virtual host traffic status module, requires manual configuration, default false
+#      - "NODE_TLS_REJECT_UNAUTHORIZED=${NODE_TLS_REJECT_UNAUTHORIZED}" # if your issuer uses a self signed cert you may need to set this, but please note that this will disable cert verification for all requests done by the backend (not nginx), like to github for version checks, gravatar, reachability checks or cloudflare for IP updates
       - "OIDC_REDIRECT_DOMAIN=${OIDC_REDIRECT_DOMAIN}" # redirect domain/ip (+ port) for oidc, without scheme and without path, redirect url will be https://$OIDC_REDIRECT_DOMAIN/api/oidc/callback
       - "OIDC_ISSUER_URL=${OIDC_ISSUER_URL}" # issuer url for oidc
-      - "NODE_TLS_REJECT_UNAUTHORIZED=${NODE_TLS_REJECT_UNAUTHORIZED}" # if your issuer uses a self signed cert you may need to set this, but please note that this will disable cert verification for all requests done by the backend (not nginx), like to github for version checks, gravatar, reachability checks or cloudflare for IP updates
       - "OIDC_CLIENT_ID=${OIDC_CLIENT_ID}" # client id for oidc
       - "OIDC_CLIENT_SECRET=${OIDC_CLIENT_SECRET}" # client secret for oidc
       - "OIDC_REQUIRE_VERIFIED_EMAIL=${OIDC_REQUIRE_VERIFIED_EMAIL}" # requires the email sent by the OIDC Provider to be marked as verified, default true
