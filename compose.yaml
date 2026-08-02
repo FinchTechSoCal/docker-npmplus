@@ -41,6 +41,8 @@ services:
       - 443:443
       - 80:80
       - 81:81
+      - 12001-12020:12001-12020
+      - 2222-2225:2222-2225
     environment:
       - "TZ=${TZ}" # set timezone, required, set it to one of the values from the "TZ identifier" https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List
 #      - "ACME_EMAIL=your-email" # email address to use for acme, required for zerossl and google public ca
